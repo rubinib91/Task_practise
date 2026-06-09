@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .form{
+            display: flex;
+            flex-direction: column;
+            padding: 20px;
+            gap: 10px;
+            align-items: center;
+            justify-content: center;
+            background-color: black;
+            color: white;
+            height: 500px;
+            width: 500px;
+        }
+    </style>
+</head>
+<body>
+    <div class="form">
+<input type="text" id="email" placeholder="Enter Email ID" >
+    <input type="password" id="password" placeholder="Enter Password">
+    <button onclick="handlesubmit()">Submit</button>
+        <p id="message"></p>
+
+    </div>
+    
+</body>
+</html>
+<script>
+
+    const handlesubmit=()=>{
+
+    let email=document.getElementById("email").value
+    let password=document.getElementById("password").value
+    let message=document.getElementById("message")
+    if(email=="")
+    {
+        message.innerHTML="Email Required"
+    }
+    else if(password.length<6)
+    {
+        message.innerHTML="Enter above 6 characters in password"
+    }
+    else
+    {
+                message.innerHTML="Login SUccessfully"
+
+    }
+}
+
+</script>
+

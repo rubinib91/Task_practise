@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .product{
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background-color: black;
+            height: 500px;
+            width: 500px;
+        
+        }
+
+        .details{
+            display: flex;
+            flex-direction: column;
+             padding: 20px;
+            gap: 10px;
+            justify-content: center;
+            align-items: center;
+            background-color: red;
+            color: white;
+            height: 200px;
+            width: 200px;
+        
+        }
+    </style>
+</head>
+<body>
+    <div class="product">
+        <div class="details">
+            <input type="text" id="name" placeholder="Enter Product Name">
+            <input type="number" id="price" placeholder="Enter Product Price">
+            <input type="number" id="quantity" placeholder="Enter Product Quantity">
+            <input type="number" placeholder="Total Amount" id="total">
+            <button onclick="handlecaluclate()">Calculate</button>
+             <p id="discount"></p>
+        </div>
+
+    </div>
+</body>
+</html>
+<script>
+    const handlecaluclate=()=>{
+ let name=document.getElementById("name").value
+ let price=document.getElementById("price").value
+ let quantity=document.getElementById("quantity").value
+ let total=document.getElementById("total")
+ let discount=document.getElementById("discount")
+ total.value=price*quantity
+if(total.value>500) 
+{
+discount.innerHTML="Eligible for Discount"
+}
+
+
+    }
+</script>

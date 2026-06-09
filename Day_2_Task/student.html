@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+<style>
+        .student{
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background-color: black;
+            height: 500px;
+            width: 500px;
+        
+        }
+
+        .studetails{
+            display: flex;
+            flex-direction: column;
+             padding: 20px;
+            gap: 10px;
+            justify-content: center;
+            align-items: center;
+            background-color: red;
+            color: white;
+            height: 200px;
+            width: 200px;
+        
+        }
+    </style>
+</head>
+<body>
+    <div class="student">
+        <div class="studetails">
+            <input type="text" id="name" placeholder="Enter student Name">
+            <input type="number" id="mark" placeholder="Enter Marks">
+            <button onclick="handleresult()">Result</button>
+             <p id="result"></p>
+        </div>
+
+    </div>
+</body>
+</html>
+<script>
+const handleresult=()=>{
+ let name=document.getElementById("name").value
+ let mark=document.getElementById("mark").value
+ let result=document.getElementById("result")
+ if(mark>=90){
+     result.innerHTML="Grade A"
+
+ }
+else if(mark>=75){
+
+         result.innerHTML="Grade B"
+
+}
+else if(mark>=50){
+    
+         result.innerHTML="Grade C"
+
+}
+else
+{
+         result.innerHTML="Fail"
+
+}
+
+}
+
+
+    
+</script>

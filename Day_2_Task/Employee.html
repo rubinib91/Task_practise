@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+<style>
+        .employee{
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background-color: black;
+            height: 500px;
+            width: 500px;
+        
+        }
+
+        .empdetails{
+            display: flex;
+            flex-direction: column;
+             padding: 20px;
+            gap: 10px;
+            justify-content: center;
+            align-items: center;
+            background-color: red;
+            color: white;
+            height: 200px;
+            width: 200px;
+        
+        }
+    </style>
+</head>
+<body>
+    <div class="employee">
+        <div class="empdetails">
+            <input type="text" id="name" placeholder="Enter Employee Name">
+            <input type="number" id="salary" placeholder="Enter Salary">
+            <input type="number" id="bonus">
+             <input type="number" id="totalsalary">
+            <button onclick="handlesalary()">Result</button>
+
+        </div>
+
+    </div>
+</body>
+</html>
+<script>
+const handlesalary=()=>{
+ let name=document.getElementById("name").value
+ let salary=Number(document.getElementById("salary").value)
+ let bonus=document.getElementById("bonus")
+ let totalsalary=document.getElementById("totalsalary")
+ if(salary>=30000){
+    bonus.value=5000
+
+ }
+else if(salary>=20000){
+            bonus.value=3000
+
+
+}
+
+else
+{
+        bonus.value=1000
+            
+
+}
+totalsalary.value=salary+Number(bonus.value)
+
+}
+
+
+    
+</script>
