@@ -1,5 +1,6 @@
 import Employee from "./Components/Employee"
 import Productsearch from "./Components/Productsearch"
+import Todolist from "./Components/Todolist"
 import Toggle from "./Components/Toggle"
 
 const App = () => {
@@ -9,6 +10,7 @@ const App = () => {
       <Employee/>
       <Productsearch/>
       <Toggle/>
+      <Todolist/>
     </div>
     </>
   )
