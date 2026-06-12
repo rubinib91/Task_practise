@@ -36,6 +36,7 @@ const Employee = () => {
             Employees with Salary Greater than ₹40,000
           </h1>
 
+      
           {filteredEmployees.map((employee) => (
             <div
               key={employee.id}
